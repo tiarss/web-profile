@@ -1,0 +1,6 @@
+export { default as reactIcon } from './reactjs.svg'
+export { default as nextIcon } from './nextjs.svg'
+export { default as typescriptIcon } from './typescript.svg'
+export { default as graphqlIcon } from './graphql.svg'
+export { default as sassIcon } from './sass.svg'
+export { default as tailwindIcon } from './tailwind.svg'
