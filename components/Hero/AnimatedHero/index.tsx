@@ -4,11 +4,11 @@ import { setTimeout } from "timers"
 import { useScramble } from 'use-scramble'
 
 const AnimatedHero = () => {
-  const [text, setText] = useState(false)
+  const [isToogle, setIsToogle] = useState(false)
   const { ref: ref2 } = useScramble({
-    text: 'Bahtiar Subrata',
+    text: isToogle ? '-' : 'Bahtiar Subrata',
     range: [65, 125],
-    speed: 0.75,
+    speed: 0.2,
     tick: 1,
     step: 6,
     scramble: 5,
@@ -18,9 +18,9 @@ const AnimatedHero = () => {
     overflow: true,
   })
   const { ref } = useScramble({
-    text: text ? 'I am Front End Developer' : `Hello.. My Name is Tiar, よろしく !`,
+    text: isToogle ? 'I am Front End Developer' : `Hello.. My Name is Tiar, よろしく !`,
     range: [65, 125],
-    speed: 10,
+    speed: 0.2,
     tick: 1,
     step: 6,
     scramble: 5,
@@ -32,14 +32,14 @@ const AnimatedHero = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setText(!text)
+      setIsToogle(!isToogle)
     }, 5000)
-  }, [text])
+  }, [isToogle])
 
   return (
     <div>
-      <p className="text-[45px] font-sans font-medium" ref={ref} />
-      <h1 ref={ref2} />
+      <p className="text-4xl 2xl:text-6xl font-sans font-medium dark:text-red-300 text-blue-400" ref={ref} />
+      <span ref={ref2} />
     </div>
   )
 }
