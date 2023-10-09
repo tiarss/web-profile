@@ -12,7 +12,7 @@ import './globals.css'
 // bg-gradient-to-t from-[#161e1b] to-[#041c23]
 
 export default function Home() {
-  const isDarkMode = localStorage?.getItem('theme')
+  const isDarkMode = typeof window !== 'undefined' ? localStorage?.getItem('theme') : 'dark'
   const [theme, setTheme] = useState(isDarkMode || 'dark')
   
   const onDarkMode = (theme: string) => {
@@ -30,7 +30,7 @@ export default function Home() {
 
   useEffect(() => {
     const htmlElement = document.querySelector('html')
-    const darkMode = localStorage.getItem('theme')
+    const darkMode = localStorage?.getItem('theme')
 
     if(darkMode === null) {
       localStorage.setItem('theme', 'dark')
