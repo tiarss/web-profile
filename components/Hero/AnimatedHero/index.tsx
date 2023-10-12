@@ -6,7 +6,7 @@ import { useScramble } from 'use-scramble'
 const AnimatedHero = () => {
   const [isToogle, setIsToogle] = useState(false)
   const { ref: ref2 } = useScramble({
-    text: isToogle ? '-' : 'Bahtiar Subrata',
+    text: isToogle ? '' : 'Tiar',
     range: [65, 125],
     speed: 0.2,
     tick: 1,
@@ -18,7 +18,7 @@ const AnimatedHero = () => {
     overflow: true,
   })
   const { ref } = useScramble({
-    text: isToogle ? 'I am Front End Developer' : `Hello.. My Name is Tiar, よろしく !`,
+    text: isToogle ? 'I am Front End Developer' : `Hello.. My Name is `,
     range: [65, 125],
     speed: 0.2,
     tick: 1,
@@ -38,8 +38,8 @@ const AnimatedHero = () => {
 
   return (
     <div>
-      <p className="text-4xl 2xl:text-6xl font-sans font-medium dark:text-red-300 text-blue-400" ref={ref} />
-      <span ref={ref2} />
+      <p className="text-4xl 2xl:text-6xl font-sans font-medium dark:text-white text-slate-800 inline" ref={ref} />
+      <span className="text-4xl 2xl:text-6xl font-sans font-medium dark:text-white text-blue-600 inline" ref={ref2} />
     </div>
   )
 }

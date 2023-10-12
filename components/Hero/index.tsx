@@ -29,13 +29,13 @@ const Hero: React.FC = () => {
     <>
       <AnimatedHero />
       <div className="flex flex-col mt-4">
-        <p className="text-m md:text-l">Know more about me:</p>
+        <p className="text-m md:text-l text-slate-800 dark:text-white">Know more about me:</p>
         <div>
           <ul className="flex gap-4">
             {linkAboutMe.map((item) => (
               <li key={item.title} className="flex items-center gap-2 text-sm mt-1">
-                <FontAwesomeIcon icon={item.logo} size="xl"/>
-                <Link href={item.link} className="text-m md:text-xl">
+                <FontAwesomeIcon icon={item.logo} size="xl" className="text-slate-800 dark:text-white" />
+                <Link href={item.link} className="text-m md:text-xl text-slate-800 dark:text-white">
                   {item.title}
                 </Link>
               </li>

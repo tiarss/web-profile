@@ -20,7 +20,7 @@ const Header: React.FC= () => {
 
   return (
     <div className="hidden md:block fixed top-0  w-full py-[40px]">
-      <ul className="flex justify-center align-middle gap-[70px]">
+      <ul className="flex justify-center align-middle gap-[70px] text-slate-800 dark:text-white">
         {MenuList.map((list: {title: string; path: string}) => (
           <Link key={list.title} href={list.path}>
             <li className="text-xl font-medium">

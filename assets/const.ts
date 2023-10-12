@@ -5,31 +5,43 @@ import {
   graphqlIcon,
   tailwindIcon,
   sassIcon,
+  reactIconColor,
+  typescriptIconColor,
+  graphqlIconColor,
+  sassIconColor,
+  tailwindIconColor,
+  nextIconColor,
 } from '@/assets'
 
 export const ProgrammingIcon = [
   {
-    image: reactIcon,
+    imageDark: reactIcon,
+    image: reactIconColor,
     alt: "react-icon",
   },
   {
-    image: nextIcon,
+    imageDark: nextIcon,
+    image: nextIconColor,
     alt: "next-icon",
   },
   {
-    image: typescriptIcon,
+    imageDark: typescriptIcon,
+    image: typescriptIconColor,
     alt: "typescript-icon",
   },
   {
-    image: graphqlIcon,
+    imageDark: graphqlIcon,
+    image: graphqlIconColor,
     alt: "grapql-icon",
   },
   {
-    image: sassIcon,
+    imageDark: sassIcon,
+    image: sassIconColor,
     alt: "sass-icon",
   },
   {
-    image: tailwindIcon,
+    imageDark: tailwindIcon,
+    image: tailwindIconColor,
     alt: "tailwind-icon",
   }
 ]
