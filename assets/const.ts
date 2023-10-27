@@ -29,11 +29,11 @@ export const ProgrammingIcon = [
     image: typescriptIconColor,
     alt: "typescript-icon",
   },
-  {
-    imageDark: graphqlIcon,
-    image: graphqlIconColor,
-    alt: "grapql-icon",
-  },
+  // {
+  //   imageDark: graphqlIcon,
+  //   image: graphqlIconColor,
+  //   alt: "grapql-icon",
+  // },
   {
     imageDark: sassIcon,
     image: sassIconColor,
