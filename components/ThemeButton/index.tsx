@@ -7,7 +7,6 @@ import { useTheme } from "next-themes"
 
 const ThemeButton = () => {
   const {theme, setTheme} = useTheme()
-  console.log(theme)
 
   return (
     <AnimatePresence mode='wait' initial={false}>

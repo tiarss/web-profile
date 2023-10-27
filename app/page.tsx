@@ -1,13 +1,12 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
 import { AnimatePresence, motion } from 'framer-motion'
 // import ThemeButton from '@/components/ThemeButton'
 const ThemeButton = dynamic(() => import('@/components/ThemeButton'), { ssr: false })
- 
 
 // import Header from '@/components/Header'
 import Hero from '@/components/Hero'
@@ -40,17 +39,9 @@ export default function Home() {
   const isMobileSize = useWindowSize().width < 768
 
   const [isActiveTab, setIsActiveTab] = useState<number>(0)
-  const { theme, setTheme } = useTheme()
-
-  const [isClient, setIsClient] = useState(false)
- 
-  useEffect(() => {
-    setTheme('light')
-    setIsClient(true)
-  }, [])
 
   return (
-    <div className={`${theme === 'dark' ? 'infinite-background' : 'infinite-background-black'} relative`}>
+    <div className='dark:after:infinite-background after:infinite-background-black relative'>
       {/* {theme === 'dark' && <div className='absolute top-[-30px] left-1/2 transform -translate-x-1/2 md:w-[900px] h-[150px] rounded-[50%] bg-gradient-to-b from-[#161e1b] to-slate-700 blur-3xl' />} */}
       {/* <Header /> */}
       {/*  Welcome Section */}
@@ -90,13 +81,24 @@ export default function Home() {
         <p className='text-4xl font-sans font-bold mb-[50px] text-slate-700 dark:text-white uppercase'>What i am used</p>
         <div className='flex w-screen flex-wrap justify-center items-center gap-[75px] px-10'>
           {ProgrammingIcon.map((data) => (
-            <Image
-              className='text-slate-200 hover:scale-125 transition-all ease-in-out cursor-pointer'
-              key={data.alt}
-              alt={data.alt}
-              height={100}
-              src={theme === 'dark' ? data.imageDark : data.image}
-            />
+            <React.Fragment key={data.alt}>
+              <Image
+                className='hidden dark:block text-slate-200 hover:scale-125 transition-all ease-in-out cursor-pointer'
+                alt={data.alt}
+                height={100}
+                placeholder='empty'
+                loading='lazy'
+                src={data.imageDark}
+              />
+              <Image
+                className='block dark:hidden text-slate-200 hover:scale-125 transition-all ease-in-out cursor-pointer'
+                alt={data.alt}
+                height={100}
+                placeholder='empty'
+                loading='lazy'
+                src={data.image}
+              />
+            </React.Fragment>
           ))}
         </div>
       </div>
