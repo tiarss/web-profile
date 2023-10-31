@@ -1,5 +1,4 @@
 'use client'
-import { useState, useEffect } from "react"
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { AnimatePresence, motion } from "framer-motion"

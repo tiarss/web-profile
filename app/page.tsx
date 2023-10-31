@@ -3,9 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
-import { useTheme } from 'next-themes'
 import { AnimatePresence, motion } from 'framer-motion'
-// import ThemeButton from '@/components/ThemeButton'
 const ThemeButton = dynamic(() => import('@/components/ThemeButton'), { ssr: false })
 
 // import Header from '@/components/Header'
@@ -36,6 +34,21 @@ export default function Home() {
     }
   ]
 
+  const dataPortfolio = [
+    {
+      title: 'Web App',
+      desc: "This is a project that I've been working on while pursuing my career in web app development. The projects I've worked on have utilized various technologies, starting from the fundamentals like HTML, CSS, and JavaScript, and advancing to the use of frameworks such as React JS.",
+      image: "",
+      url: '/?portfolio=web-app'
+    },
+    {
+      title: 'Mobile App',
+      desc: "This is a project I've worked on to explore the Mobile App development field, aiming to enhance my skills in Front End. The project utilizes React Native. There are still relatively few projects in the Mobile App domain, and I aspire to continue expanding my knowledge in Mobile App development.",
+      image: "",
+      url: '/?portfolio=mobile-app'
+    },
+  ]
+
   const isMobileSize = useWindowSize().width < 768
 
   const [isActiveTab, setIsActiveTab] = useState<number>(0)
@@ -45,7 +58,7 @@ export default function Home() {
       {/* {theme === 'dark' && <div className='absolute top-[-30px] left-1/2 transform -translate-x-1/2 md:w-[900px] h-[150px] rounded-[50%] bg-gradient-to-b from-[#161e1b] to-slate-700 blur-3xl' />} */}
       {/* <Header /> */}
       {/*  Welcome Section */}
-      <div className='flex flex-col w-screen h-screen justify-center items-start px-[50px] md:px-[70px]'>
+      <div className='flex flex-col h-screen justify-center items-start px-[50px] md:px-[70px]'>
         {/* <div className='flex flex-col justify-center bg-[#3c6e71da] w-full h-[80%] rounded-3xl p-[50px]'> */}
         <Hero />
         {/* </div> */}
@@ -77,7 +90,7 @@ export default function Home() {
         </div>
       </div>
       {/* Tech Stack */}
-      <div className='flex flex-col justify-center items-center gap-2 h-screen'>
+      <div className='flex flex-col justify-center items-center gap-2 h-[80vh]'>
         <p className='text-4xl font-sans font-bold mb-[50px] text-slate-700 dark:text-white uppercase'>What i am used</p>
         <div className='flex w-screen flex-wrap justify-center items-center gap-[75px] px-10'>
           {ProgrammingIcon.map((data) => (
@@ -103,12 +116,17 @@ export default function Home() {
         </div>
       </div>
       {/* My Project */}
-      <div className='flex flex-col w-full items-center justify-center gap-2 h-screen'>
-        <p className='text-4xl font-sans font-medium mb-[20px] text-slate-800 dark:text-white'>Portfolio</p>
-        <div>
-          <div className=''>
-            <p>Title</p>
-          </div>
+      <div className='flex flex-col w-full items-center justify-center gap-2 h-[100vh]'>
+        <p className='text-4xl font-sans font-bold mb-[40px] text-slate-800 dark:text-white uppercase'>Portfolio</p>
+        <div className='w-[816px]'>
+          {dataPortfolio.map((item, index) => (
+            <div className='dark:bg-[#ffffffd8] bg-[rgb(30,41,59,0.9)] mb-[20px] w-[100%] p-[50px] rounded-2xl' key={item.title}>
+              <div className={`flex flex-col ${index % 2 === 0 ? 'items-start' : 'items-end'}`}>
+                <h2 className='dark:text-slate-800 text-white text-2xl font-bold uppercase mb-2'>{item.title}</h2>
+                <p className={`w-[300px] dark:text-slate-800 text-white ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>{item.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <ThemeButton />
