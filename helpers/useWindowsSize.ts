@@ -7,8 +7,8 @@ export type WindowType = {
 
 export default function useWindowSize(): WindowType {
   const [windowSize, setWindowSize] = useState<WindowType>(() => ({
-    width: 0,
-    height: 0,
+    width: 1920,
+    height: 1920,
   }))
   const [firstRender, setFirstRender] = useState<boolean>(true)
 

@@ -1,0 +1,1 @@
+export { default as bmjImage } from './Rectangle 1bmj.png'
