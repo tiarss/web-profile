@@ -342,9 +342,8 @@ export default function Home() {
               </button>
             }>
             {PortfolioImage.map((data) => (
-              <a href="/portfolio">
+              <a href="/portfolio" key={data.alt}>
                 <motion.div
-                  key={data.alt}
                   className="px-2 group cursor-pointer"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -391,7 +390,7 @@ export default function Home() {
                dark:from-emerald-400 dark:via-teal-400 dark:to-cyan-400
                bg-clip-text text-transparent
                tracking-tight">
-          Let's Collaborate
+          {`Let's Collaborate`}
         </motion.h2>
 
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
@@ -418,7 +417,7 @@ export default function Home() {
                 Professional Inquiries
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-8 min-h-[80px] font-sans">
-                Open for freelance projects, consulting work, and full-time opportunities. Let's discuss how we can work together to bring your ideas to life.
+                {`Open for freelance projects, consulting work, and full-time opportunities. Let's discuss how we can work together to bring your ideas to life.`}
               </p>
               <a
                 href="mailto:subratabahtiar@gmail.com"
@@ -459,7 +458,7 @@ export default function Home() {
                 Projek Bareng
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-8 min-h-[80px] font-sans">
-                Have an innovative tech idea but need help bringing it to life? I'm part of a small development group that helps implement project ideas for individuals and small businesses. We provide technical expertise and hands-on development to turn your concepts into reality.
+                {`Have an innovative tech idea but need help bringing it to life? I'm part of a small development group that helps implement project ideas for individuals and small businesses. We provide technical expertise and hands-on development to turn your concepts into reality.`}
               </p>
               <a
                 href="mailto:projekbareng@outlook.com"

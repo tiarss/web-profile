@@ -62,7 +62,7 @@ export default function PortfolioPage() {
               My Portfolio
             </h1>
             <p className="text-lg md:text-2xl text-gray-700 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium">
-              Welcome to my portfolio page. Here you'll find a curated collection of my professional work and passion projects.
+              {`Welcome to my portfolio page. Here you'll find a curated collection of my professional work and passion projects.`}
             </p>
           </div>
 
