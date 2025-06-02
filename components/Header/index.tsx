@@ -42,7 +42,7 @@ const Header: React.FC= () => {
       <ul className="flex justify-center align-middle gap-[70px] text-slate-800 dark:text-white">
         {MenuList.map((list: {title: string; path: string}) => (
           <a key={list.title} href={list.path}>
-            <li className={`text-xl font-medium ${isScroll ? 'dark:text-white' : ''}`}>
+            <li className={`font-sans text-xl font-medium ${isScroll ? 'dark:text-white' : ''}`}>
               {list.title}
             </li>
           </a>

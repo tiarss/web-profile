@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
     },
     {
       title: "Resume",
-      link: "comingsoon",
+      link: "https://drive.google.com/file/d/1aE9QKcEy4h86EQvcE55cibtA5SNUQj44/view?usp=sharing",
       logo: faNoteSticky
     },
   ]

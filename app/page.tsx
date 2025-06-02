@@ -54,11 +54,11 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </div>
-                <h3 className='text-2xl font-bold mb-4 text-gray-900 dark:text-white'>
+                <h3 className='text-2xl font-bold mb-4 text-gray-900 dark:text-white font-sans'>
                   Profile
                 </h3>
-                <p className='text-gray-600 dark:text-gray-300 leading-relaxed'>
-                  My Name Tiar, I am a front-end developer with over 1 year of professional experience in building and maintaining web apps. I have a strong interest in web development and how web development technologies are evolving today. I am quite familiar with front-end frameworks like Next.js. I enjoy in collaborating with a team and I am happy to learn new things.
+                <p className='text-gray-600 dark:text-gray-300 leading-relaxed font-sans'>
+                  Frontend Developer with 3+ years of experience in designing, building, and maintaining scalable web applications. Proficient in modern frontend technologies, including Next.js, and actively expanding expertise in mobile development with React Native. Passionate about creating clean, user-centric interfaces and collaborating in cross-functional teams. Quick to adapt to new technologies and committed to continuous learning to deliver high-quality user experiences across platforms.
                 </p>
               </div>
             </motion.div>
@@ -84,12 +84,27 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
-                <h3 className='text-2xl font-bold mb-4 text-gray-900 dark:text-white'>
+                <h3 className='text-2xl font-bold mb-4 text-gray-900 dark:text-white font-sans'>
                   Education
                 </h3>
-                <p className='text-gray-600 dark:text-gray-300 leading-relaxed'>
-                  I am graduated with Bachelor Degree in Electronic Engineering form Politeknik Elektronika Negeri Surabaya.
-                </p>
+                <div className="mb-6 font-sans">
+                  <h4 className="font-semibold mb-2">SIRCLO Tech Academy x Altera Academy</h4>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Dec 2021 – Mar 2022</p>
+                  <p className="mb-2">Front End – React Js</p>
+                  <ul className="list-disc list-inside space-y-1 ml-4">
+                    <li>Learn front-end development skills from fundamental to advanced proficiency</li>
+                    <li>Finish some Project and Final Capstone Project</li>
+                  </ul>
+                </div>
+
+                <div className='font-sans'>
+                  <h4 className="font-semibold mb-2">Politeknik Elektronika Negeri Surabaya</h4>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">D4 – Electronic Engineering | GPA: 3.52 | Jul 2016 – Sept 2020</p>
+                  <ul className="list-disc list-inside space-y-1 ml-4">
+                    <li>Head of Communication and Information Department in HIMA ELKA PENS</li>
+                    <li>Presenter in Pekan Ilmiah Mahasiswa Nasional 32 (PIMNAS 32) at Universitas Udayana</li>
+                  </ul>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -126,7 +141,7 @@ export default function Home() {
                          bg-gradient-to-b from-purple-400 to-purple-600 rounded-full
                          animate-pulse" />
 
-          <div className="mb-4 md:mb-6">
+          <div className="mb-4 md:mb-6 font-sans">
             <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-purple-600 dark:text-purple-400">
               Frontend Developer – Web & Mobile
             </h4>
@@ -135,7 +150,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="space-y-4 md:space-y-6">
+          <div className="space-y-4 md:space-y-6 font-sans">
             <ul className="list-disc list-inside space-y-2 sm:space-y-3 
                          text-sm sm:text-base text-slate-600 dark:text-slate-300 
                          ml-2 sm:ml-3 md:ml-4">
@@ -149,7 +164,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="mt-6 sm:mt-8 p-4 sm:p-5 md:p-6 
+          <div className="mt-6 sm:mt-8 p-4 sm:p-5 md:p-6 font-sans
                          bg-gradient-to-br from-slate-50 to-slate-100 
                          dark:from-[#0a2730] dark:to-[#0d2f3a] 
                          rounded-lg border border-slate-200 dark:border-slate-700
@@ -157,7 +172,7 @@ export default function Home() {
             <h4 className="text-sm sm:text-base font-semibold text-purple-600 dark:text-purple-400 mb-3 md:mb-4">
               Tech Stack
             </h4>
-            <div className="flex flex-wrap gap-2 sm:gap-2.5">
+            <div className="flex flex-wrap gap-2 sm:gap-2.5 font-sans">
               {["Typescript", "Next Js", "React Native Expo", "Tanstack Query", "Ant Design 5", "Tailwind CSS", "Zustand"].map((tech) => (
                 <motion.span
                   key={tech}
@@ -197,7 +212,7 @@ export default function Home() {
                          bg-gradient-to-b from-blue-400 to-blue-600 rounded-full
                          animate-pulse" />
 
-          <div className="mb-4 md:mb-6">
+          <div className="mb-4 md:mb-6 font-sans">
             <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-blue-600 dark:text-blue-400">
               Junior Software Engineer – Front End
             </h4>
@@ -206,7 +221,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="space-y-4 md:space-y-6">
+          <div className="space-y-4 md:space-y-6 font-sans">
             <ul className="list-disc list-inside space-y-2 sm:space-y-3
                          text-sm sm:text-base text-slate-600 dark:text-slate-300 
                          ml-2 sm:ml-3 md:ml-4">
@@ -218,7 +233,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="mt-6 sm:mt-8 p-4 sm:p-5 md:p-6 
+          <div className="mt-6 sm:mt-8 p-4 sm:p-5 md:p-6 font-sans
                          bg-gradient-to-br from-slate-50 to-slate-100 
                          dark:from-[#0a2730] dark:to-[#0d2f3a] 
                          rounded-lg border border-slate-200 dark:border-slate-700

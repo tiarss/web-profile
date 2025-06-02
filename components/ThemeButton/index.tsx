@@ -8,7 +8,7 @@ const ThemeButton = () => {
   const {theme, setTheme} = useTheme()
 
   return (
-    <AnimatePresence mode='wait' initial={false}>
+    <AnimatePresence mode='wait' initial={true}>
         {theme === "dark" ?
           <motion.div
             key={'moon'}
