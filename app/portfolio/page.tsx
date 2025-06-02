@@ -124,12 +124,12 @@ export default function PortfolioPage() {
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Contact</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="mailto:contact@example.com" className="text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors">
+                  <a href="mailto:subratabahtiar@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors">
                     subratabahtiar@gmail.com
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+1234567890" className="text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors">
+                  <a href="https://wa.me/6287855911143" target="_blank" className="text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors">
                     +62 878-5591-1143
                   </a>
                 </li>
@@ -160,12 +160,12 @@ export default function PortfolioPage() {
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#about-me" className="text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors">
-                    About Me
+                  <a href="/" className="text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors">
+                    Home
                   </a>
                 </li>
                 <li>
-                  <a href="#portfolio" className="text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors">
+                  <a href="/portfolio" className="text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors">
                     Portfolio
                   </a>
                 </li>
