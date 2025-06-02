@@ -10,4 +10,6 @@ export { default as tailwindIconColor } from './tailwindcolor.svg'
 export { default as typescriptIconColor } from './typescriptcolor.svg'
 export { default as graphqlIconColor } from './gqlcolor.svg'
 export { default as nextIconColor } from './nextcolor.svg'
+export { default as expoIconColor } from './expocolor.svg'
+export { default as expoIcon } from './expo.svg'
 

@@ -1,10 +1,8 @@
 'use client'
 
-import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Carousel } from '@trendyol-js/react-carousel';
-const ThemeButton = dynamic(() => import('@/components/ThemeButton'), { ssr: false })
 
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
@@ -44,7 +42,6 @@ export default function Home() {
               }}
               className='group relative overflow-hidden rounded-3xl bg-white/80 dark:bg-gray-900/80 
                         backdrop-blur-lg border border-gray-200 dark:border-gray-800
-                        hover:shadow-2xl hover:shadow-indigo-500/20 
                         transition-all duration-500'
             >
               <div className='absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 dark:from-indigo-900/30 dark:to-purple-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
@@ -74,7 +71,6 @@ export default function Home() {
               }}
               className='group relative overflow-hidden rounded-3xl bg-white/80 dark:bg-gray-900/80 
                         backdrop-blur-lg border border-gray-200 dark:border-gray-800
-                        hover:shadow-2xl hover:shadow-pink-500/20 
                         transition-all duration-500'
             >
               <div className='absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 dark:from-purple-900/30 dark:to-pink-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
@@ -88,19 +84,19 @@ export default function Home() {
                   Education
                 </h3>
                 <div className="mb-6 font-sans">
-                  <h4 className="font-semibold mb-2">SIRCLO Tech Academy x Altera Academy</h4>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Dec 2021 – Mar 2022</p>
-                  <p className="mb-2">Front End – React Js</p>
-                  <ul className="list-disc list-inside space-y-1 ml-4">
+                  <h4 className="font-semibold mb-2 text-gray-600 dark:text-gray-300">SIRCLO Tech Academy x Altera Academy</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">Dec 2021 – Mar 2022</p>
+                  <p className="mb-2 text-gray-600 dark:text-gray-300">Front End – React Js</p>
+                  <ul className="list-disc list-inside space-y-1 ml-4 text-gray-600 dark:text-gray-300">
                     <li>Learn front-end development skills from fundamental to advanced proficiency</li>
                     <li>Finish some Project and Final Capstone Project</li>
                   </ul>
                 </div>
 
                 <div className='font-sans'>
-                  <h4 className="font-semibold mb-2">Politeknik Elektronika Negeri Surabaya</h4>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">D4 – Electronic Engineering | GPA: 3.52 | Jul 2016 – Sept 2020</p>
-                  <ul className="list-disc list-inside space-y-1 ml-4">
+                  <h4 className="font-semibold mb-2 text-gray-600 dark:text-gray-300">Politeknik Elektronika Negeri Surabaya</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">D4 – Electronic Engineering | GPA: 3.52 | Jul 2016 – Sept 2020</p>
+                  <ul className="list-disc list-inside space-y-1 ml-4 text-gray-600 dark:text-gray-300">
                     <li>Head of Communication and Information Department in HIMA ELKA PENS</li>
                     <li>Presenter in Pekan Ilmiah Mahasiswa Nasional 32 (PIMNAS 32) at Universitas Udayana</li>
                   </ul>
@@ -295,35 +291,36 @@ export default function Home() {
         </div>
       </div>
       {/* My Project */}
-      <div className="min-h-screen flex flex-col items-center justify-center py-16 md:py-24 px-4 md:px-8 bg-gradient-to-b from-transparent via-slate-50/30 to-transparent dark:via-slate-900/30" id='portfolio'>
+      <div className="min-h-screen flex flex-col items-center justify-center py-16 px-4 bg-gradient-to-b from-transparent via-slate-50/30 to-transparent dark:via-slate-900/30" id='portfolio'>
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-5xl font-black text-center mb-12 md:mb-16
-                     bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600
-                     dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400
-                     bg-clip-text text-transparent
-                     tracking-tight">
+               bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600
+               dark:from-purple-400 dark:via-pink-400 dark:to-rose-400
+               bg-clip-text text-transparent
+               tracking-tight">
           Portfolio
         </motion.h2>
 
-        <div className="w-full max-w-[1200px] px-4 md:px-8">
+        <div className="w-full max-w-5xl">
           <Carousel
             show={1}
             slide={1}
-            transition={0.5}
+            transition={0.3}
             swiping
             className="w-full"
             leftArrow={
               <button className="absolute left-4 top-1/2 -translate-y-1/2 z-10
-                               w-10 h-10 md:w-12 md:h-12
-                               flex items-center justify-center
-                               rounded-full bg-white/80 dark:bg-gray-800/80
-                               shadow-lg backdrop-blur-sm
-                               text-gray-800 dark:text-gray-200
-                               hover:bg-white dark:hover:bg-gray-800
-                               transition-all duration-300">
+                         w-10 h-10
+                         flex items-center justify-center
+                         rounded-full bg-white/80 dark:bg-gray-800/80
+                         text-gray-800 dark:text-gray-200
+                         border border-gray-200 dark:border-gray-700
+                         hover:bg-white dark:hover:bg-gray-800
+                         transition-colors duration-200"
+                title="Previous project">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
                 </svg>
@@ -331,52 +328,160 @@ export default function Home() {
             }
             rightArrow={
               <button className="absolute right-4 top-1/2 -translate-y-1/2 z-10
-                               w-10 h-10 md:w-12 md:h-12
-                               flex items-center justify-center
-                               rounded-full bg-white/80 dark:bg-gray-800/80
-                               shadow-lg backdrop-blur-sm
-                               text-gray-800 dark:text-gray-200
-                               hover:bg-white dark:hover:bg-gray-800
-                               transition-all duration-300">
+                         w-10 h-10
+                         flex items-center justify-center
+                         rounded-full bg-white/80 dark:bg-gray-800/80
+                         text-gray-800 dark:text-gray-200
+                         border border-gray-200 dark:border-gray-700
+                         hover:bg-white dark:hover:bg-gray-800
+                         transition-colors duration-200"
+                title="Next project">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
               </button>
             }>
             {PortfolioImage.map((data) => (
-              <motion.div
-                key={data.alt}
-                className="px-2 md:px-4"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="relative group overflow-hidden rounded-2xl shadow-xl">
-                  <Image
-                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                    alt={data.alt}
-                    height={800}
-                    width={1200}
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHiQlJyAlJSQxMi0wMTItMTA7LjoxOS47LjVBNkZGQTVeYF5iXnJycnL/2wBDARUXFx4aHiMeHiNyU0JTcnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                    loading="lazy"
-                    src={data.image}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <h3 className="text-xl md:text-2xl font-bold mb-2">{data.alt}</h3>
-                      <p className="text-sm md:text-base opacity-90">Click to view details</p>
+              <a href="/portfolio">
+                <motion.div
+                  key={data.alt}
+                  className="px-2 group cursor-pointer"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                  title={`View ${data.alt} project details`}
+                >
+                  <div className="relative overflow-hidden rounded-xl shadow-lg border border-gray-200 dark:border-gray-800
+                              transform transition-transform duration-300 group-hover:scale-[1.02]">
+                    <Image
+                      className="w-full h-auto object-cover"
+                      alt={data.alt}
+                      height={800}
+                      width={1200}
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHiQlJyAlJSQxMi0wMTItMTA7LjoxOS47LjVBNkZGQTVeYF5iXnJycnL/2wBDARUXFx4aHiMeHiNyU0JTcnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                      loading="lazy"
+                      src={data.image}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent 
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 className="text-2xl font-bold mb-2 font-sans">{data.title}</h3>
+                        <p className="text-sm opacity-90 font-sans leading-relaxed">
+                          Click to view project details and technologies used
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </a>
             ))}
           </Carousel>
         </div>
       </div>
-      <ThemeButton />
 
-      {/* Footer */}
+      {/* Collaboration Section */}
+      <div className="min-h-screen flex flex-col items-center justify-center py-16 md:py-24 px-4 md:px-8 bg-gradient-to-b from-transparent via-indigo-50/20 to-transparent dark:via-indigo-950/20">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl md:text-5xl font-black text-center mb-12 md:mb-16
+               bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600
+               dark:from-emerald-400 dark:via-teal-400 dark:to-cyan-400
+               bg-clip-text text-transparent
+               tracking-tight">
+          Let's Collaborate
+        </motion.h2>
+
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+          {/* Professional Inquiries */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="group bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg
+                      rounded-2xl p-8 md:p-10
+                      border border-gray-200 dark:border-gray-800
+                      transform hover:scale-[1.02] transition-all duration-300
+                      relative overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-emerald-500/10 dark:from-teal-500/5 dark:to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative">
+              <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-teal-500 to-emerald-500 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white font-sans">
+                Professional Inquiries
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-8 min-h-[80px] font-sans">
+                Open for freelance projects, consulting work, and full-time opportunities. Let's discuss how we can work together to bring your ideas to life.
+              </p>
+              <a
+                href="mailto:subratabahtiar@gmail.com"
+                className="inline-flex items-center px-6 py-3 rounded-lg
+                         bg-gradient-to-r from-teal-500 to-emerald-500
+                         text-white font-medium
+                         hover:from-teal-600 hover:to-emerald-600
+                         transform hover:translate-x-1 font-sans
+                         transition-all duration-300"
+              >
+                Get in Touch
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="group bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg
+                      rounded-2xl p-8 md:p-10
+                      border border-gray-200 dark:border-gray-800
+                      transform hover:scale-[1.02] transition-all duration-300
+                      relative overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 dark:from-cyan-500/5 dark:to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative">
+              <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white font-sans">
+                Projek Bareng
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-8 min-h-[80px] font-sans">
+                Have an innovative tech idea but need help bringing it to life? I'm part of a small development group that helps implement project ideas for individuals and small businesses. We provide technical expertise and hands-on development to turn your concepts into reality.
+              </p>
+              <a
+                href="mailto:projekbareng@outlook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 rounded-lg
+                         bg-gradient-to-r from-cyan-500 to-blue-500
+                         text-white font-medium font-sans
+                         hover:from-cyan-600 hover:to-blue-600
+                         transform hover:translate-x-1
+                         transition-all duration-300"
+              >
+                Join Project
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
       {/* Footer */}
       <footer className="bg-gradient-to-t from-slate-100 to-transparent dark:from-slate-900 dark:to-transparent py-12 mt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -11,6 +11,8 @@ import {
   sassIconColor,
   tailwindIconColor,
   nextIconColor,
+  expoIconColor,
+  expoIcon
 } from '@/assets'
 
 export const ProgrammingIcon = [
@@ -23,6 +25,11 @@ export const ProgrammingIcon = [
     imageDark: nextIcon,
     image: nextIconColor,
     alt: "next-icon",
+  },
+  {
+    imageDark: expoIcon,
+    image: expoIconColor,
+    alt: "expo-icon",
   },
   {
     imageDark: typescriptIcon,

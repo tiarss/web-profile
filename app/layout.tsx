@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Providers } from './providers'
+import ThemeButton from '@/components/ThemeButton'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -55,6 +56,7 @@ export default function RootLayout({
       <body className={`${inter.className} text-white bg-white dark:bg-[#041c23] antialiased`}>
         <Providers>
           {children}
+          <ThemeButton />
         </Providers>
       </body>
     </html>

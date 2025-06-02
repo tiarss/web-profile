@@ -38,7 +38,7 @@ const Header: React.FC= () => {
   }, [])
 
   return (
-    <div className={`hidden md:block fixed z-10 top-0 w-full transition-all ease-in-out duration-200 ${isScroll ? 'dark:bg-[rgb(4,28,35,0.8)] bg-[rgb(255,255,255,0.8)] py-[30px]' : ' py-[40px]'}`}>
+    <div className={`hidden md:block fixed z-50 top-0 w-full transition-all ease-in-out duration-200 ${isScroll ? 'dark:bg-[rgb(4,28,35,0.8)] bg-[rgb(255,255,255,0.8)] py-[30px]' : ' py-[40px]'}`}>
       <ul className="flex justify-center align-middle gap-[70px] text-slate-800 dark:text-white">
         {MenuList.map((list: {title: string; path: string}) => (
           <a key={list.title} href={list.path}>
