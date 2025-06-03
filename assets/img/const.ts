@@ -220,8 +220,8 @@ export const PortfolioDetails = [
     title: "Kampus ASN - Tryout Platform",
     shortDesc: "Tryout Web",
     longDesc: "An online examination and assessment platform for students preparing for various standardized tests.",
-    techStack: ["Next.js", "FastAPI", "PostgreSQL", "TailwindCSS", "Figma", "RestAPI", "PostgreSQL"],
-    role: "Full Stack Developer",
+    techStack: ["Next.js", "FastAPI", "PostgreSQL", "TailwindCSS", "Figma", "RestAPI", "PostgreSQL", "Shadcn"],
+    role: "Frontend Developer",
     year: "2025",
     status: "in-progress"
   },
@@ -231,7 +231,7 @@ export const PortfolioDetails = [
     shortDesc: "IOT Mobile App and Web",
     longDesc: "An Internet of Things platform for device monitoring and control, with both web and mobile interfaces.",
     techStack: ["NextJS", "React Native - Expo", "FastAPI", "MQTT", "PostgreSQL", "Figma", "RestAPI"],
-    role: "Full Stack Developer",
+    role: "Frontend Developer and Mobile Developer",
     year: "2025",
     status: "in-progress"
   },

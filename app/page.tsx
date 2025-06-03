@@ -296,11 +296,7 @@ export default function Home() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-black text-center mb-12 md:mb-16
-               bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600
-               dark:from-purple-400 dark:via-pink-400 dark:to-rose-400
-               bg-clip-text text-transparent
-               tracking-tight">
+          className='text-4xl font-sans font-bold mb-[50px] text-slate-700 dark:text-white uppercase'>
           Portfolio
         </motion.h2>
 
@@ -385,11 +381,7 @@ export default function Home() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-black text-center mb-12 md:mb-16
-               bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600
-               dark:from-emerald-400 dark:via-teal-400 dark:to-cyan-400
-               bg-clip-text text-transparent
-               tracking-tight">
+          className='text-4xl font-sans font-bold mb-[50px] text-slate-700 dark:text-white uppercase'>
           {`Let's Collaborate`}
         </motion.h2>
 

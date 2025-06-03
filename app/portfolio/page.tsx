@@ -1,8 +1,6 @@
 import { PortfolioDetails } from "@/assets/img/const";
 import { Metadata } from "next";
 import '../globals.css'
-import ThemeButton from "@/components/ThemeButton";
-import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: 'Portfolio | Tiar Subrata - Software Engineer',
@@ -58,11 +56,20 @@ export default function PortfolioPage() {
       <div className="p-4 md:p-8 lg:p-12 flex min-h-screen flex-col items-center justify-between -z-20">
         <div className="max-w-7xl w-full items-center justify-between font-sans">
           <div className="text-center mb-20 animate-fade-in mt-16 relative">
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 bg-clip-text text-transparent animate-gradient relative">
-              My Portfolio
+            <h1 className="relative">
+              <span className="inline-block text-6xl md:text-8xl font-bold mb-6 text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition-all duration-300">
+                Portfolio
+              </span>
+              <div className="mx-auto h-0.5 w-16 bg-gray-900 dark:bg-white rounded-full mt-2"></div>
             </h1>
-            <p className="text-lg md:text-2xl text-gray-700 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium">
-              {`Welcome to my portfolio page. Here you'll find a curated collection of my professional work and passion projects.`}
+            <p className="text-xl md:text-2xl max-w-2xl mx-auto mt-8 leading-relaxed">
+              <span className="font-medium text-gray-900 dark:text-white">
+                Welcome to my creative space
+              </span>
+              <span className="mx-2 text-gray-600 dark:text-gray-400">—</span>
+              <span className="text-gray-700 dark:text-gray-300">
+                where innovation meets execution through carefully crafted projects.
+              </span>
             </p>
           </div>
 
@@ -70,19 +77,45 @@ export default function PortfolioPage() {
             {PortfolioDetails.map((project, index) => (
               <a key={index} className="relative">
                 <div className="relative bg-white dark:bg-gray-800/90 backdrop-blur-lg rounded-xl p-8 flex flex-col h-full shadow-lg border border-gray-100/20 dark:border-gray-700/30">
-                  <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
+                  <h3 className="text-2xl font-bold mb-1 text-gray-900 dark:text-white line-clamp-2">
                     {project.title}
                   </h3>
+
+                  <div className="flex items-center mb-2 mt-2">
+                    <svg className="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <p className="font-medium text-sm text-gray-600 dark:text-gray-300">
+                      {project.year}
+                    </p>
+                  </div>
+
+                  <div className="flex items-center mb-4">
+                    <svg className="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <p className="font-semibold tracking-wide text-sm text-gray-700 dark:text-gray-200">
+                      {project.role}
+                    </p>
+                  </div>
 
                   <p className="text-gray-700 dark:text-gray-200 text-base mb-6">
                     {project.longDesc}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 mb-8">
+                  <div className="flex flex-wrap gap-1.5 mb-6">
                     {project.techStack.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-4 py-2 bg-gray-100/80 dark:bg-gray-700/80 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium"
+                        className="px-2 py-1 
+                        bg-gray-100
+                        dark:bg-gray-800
+                        text-gray-600 dark:text-gray-300
+                        rounded-lg text-xs font-medium
+                        border border-gray-200 dark:border-gray-700
+                        hover:bg-gray-200 dark:hover:bg-gray-700
+                        transition-colors duration-150
+                        cursor-default"
                       >
                         {tech}
                       </span>
@@ -90,23 +123,19 @@ export default function PortfolioPage() {
                   </div>
 
                   <div className="mt-auto">
-                    <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center justify-between">
                       {project.status === 'finished' ? (
-                        <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold bg-green-100/80 text-green-800 dark:bg-green-900/70 dark:text-green-200">
+                        <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-semibold bg-green-100/80 text-green-800 dark:bg-green-900/70 dark:text-green-200">
+                          <span className="mr-1.5 w-2 h-2 rounded-full bg-green-500"></span>
                           Completed
                         </span>
                       ) : (
-                        <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold bg-yellow-100/80 text-yellow-800 dark:bg-yellow-900/70 dark:text-yellow-200">
+                        <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-semibold bg-yellow-100/80 text-yellow-800 dark:bg-yellow-900/70 dark:text-yellow-200">
+                          <span className="mr-1.5 w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></span>
                           In Progress
                         </span>
                       )}
                     </div>
-                    <p className="font-semibold tracking-wide text-sm text-gray-600 dark:text-gray-300 line-clamp-2 mb-2">
-                      {project.role}
-                    </p>
-                    <p className="font-medium text-sm text-gray-600 dark:text-gray-300 text-right">
-                      {project.year}
-                    </p>
                   </div>
                 </div>
               </a>
