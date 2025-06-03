@@ -75,7 +75,7 @@ export default function PortfolioPage() {
                   </h3>
 
                   <p className="text-gray-700 dark:text-gray-200 text-base mb-6">
-                    {project.shortDesc}
+                    {project.longDesc}
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-8">

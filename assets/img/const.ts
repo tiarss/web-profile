@@ -10,6 +10,7 @@ import {
   temanImage,
   periImage,
   inprogressImage,
+  gameImage
 } from '@/assets/img'
 
 export const PortfolioImage = [
@@ -39,6 +40,13 @@ export const PortfolioImage = [
     alt: "hnt-image",
     title: "Hinatazaka46 Web",
     shortDesc: "Hinatazaka46 Web (Dicoding Submission)",
+    status: "finished"
+  },
+  {
+    image: gameImage,
+    alt: "game-image",
+    title: "Game and Movie Web",
+    shortDesc: "Game and Movie Web (Sanbercode Submission)",
     status: "finished"
   },
   {
@@ -101,7 +109,7 @@ export const PortfolioImage = [
     image: inprogressImage,
     alt: "expense-image",
     title: "Expense Tracker",
-    shortDesc: "Expense Tracker Web (Golang) and Mobile (Swift UI)",
+    shortDesc: "Expense Tracker API (Golang) and Mobile (Swift UI)",
     status: "in-progress",
   }
 ]
@@ -121,7 +129,7 @@ export const PortfolioDetails = [
     id: "wln",
     title: "Wulan Backdrop",
     shortDesc: "Wulan Backdrop",
-    longDesc: "An e-commerce website for a backdrop rental business, including inventory management, booking system, and payment integration.",
+    longDesc: "An simple web profile to advertise a backdrop rental business, including inventory management",
     techStack: ["HTML", "CSS", "Javascript"],
     role: "Freelance - Web Developer",
     year: "2020",
@@ -131,7 +139,7 @@ export const PortfolioDetails = [
     id: "catetin",
     title: "Catetin - Web Notes App",
     shortDesc: "Catetin - Web Notes App",
-    longDesc: "A minimalist note-taking application with cloud sync, markdown support, and collaborative features.",
+    longDesc: "A minimalist note-taking application with local database synchronization and a user-friendly interface.",
     techStack: ["React", "Javascript", "LocalStorage", "CSS", "HTML"],
     role: "Web Developer",
     year: "2021",
@@ -141,7 +149,7 @@ export const PortfolioDetails = [
     id: "hnt",
     title: "Hinatazaka46 Web",
     shortDesc: "Hinatazaka46 Web (Dicoding Submission)",
-    longDesc: "A fan website for Hinatazaka46 idol group, featuring member profiles, news updates, and media gallery. Built as a submission for Dicoding course.",
+    longDesc: "A fan website for Hinatazaka46 idol group, featuring member profiles, and media gallery. Built as a submission for Dicoding course.",
     techStack: ["HTML", "CSS", "Javascript"],
     role: "Frontend Developer",
     year: "2021",
@@ -151,7 +159,7 @@ export const PortfolioDetails = [
     id: "bmj",
     title: "Batara Mulya Jaya",
     shortDesc: "Batara Mulya Jaya Web - Mobile",
-    longDesc: "A comprehensive business management system with web and mobile interfaces for Batara Mulya Jaya company.",
+    longDesc: "A comprehensive employee management and payslip system with web and mobile interfaces for Batara Mulya Jaya company.",
     techStack: ["ReactJS", "Laravel", "React Native", "MySQL", "ChakraUI", "Figma"],
     role: "Frontend Web Developer & UI/UX",
     year: "2021",
@@ -161,7 +169,7 @@ export const PortfolioDetails = [
     id: "ecom",
     title: "Ecommerce Platform",
     shortDesc: "Ecommerce Web",
-    longDesc: "A full-featured e-commerce platform with product management, shopping cart, and secure payment processing.",
+    longDesc: "A full-featured e-commerce platform with product management, shopping cart, and payment processing.",
     techStack: ["Reactjs", "Typescript", "Go", "PostgreSQL", "MaterialUI, CSS", "HTML", "Figma", "AWS", "RestAPI"],
     role: "Frontend Developer",
     year: "2021",
@@ -171,7 +179,7 @@ export const PortfolioDetails = [
     id: "event",
     title: "Event Planner Platform",
     shortDesc: "Event Planner Web",
-    longDesc: "A web application for event planning and management, including scheduling, vendor management, and guest list features.",
+    longDesc: "A web application for event planning and management, including scheduling, and guest list features.",
     techStack: ["Reactjs", "Typescript", "Go", "PostgreSQL", "ChakraUI, CSS", "HTML", "Figma", "AWS", "GraphQL"],
     role: "Frontend Developer - Group Lead",
     year: "2022",
@@ -181,7 +189,7 @@ export const PortfolioDetails = [
     id: "eproc",
     title: "E-Procurement System",
     shortDesc: "E-Procurement Web",
-    longDesc: "An electronic procurement system for streamlining the purchasing process, vendor management, and tender submissions.",
+    longDesc: "An electronic procurement system for inventory management, procurement process and borrowing process in company.",
     techStack: ["Nextjs", "Typescript", "Go", "PostgreSQL", "ChakraUI, CSS", "HTML", "Figma", "AWS", "RestAPI"],
     role: "Frontend Developer - Group Lead",
     year: "2022",
@@ -191,7 +199,7 @@ export const PortfolioDetails = [
     id: "teman",
     title: "Teman Istimewa",
     shortDesc: "Teman Istimewa Integrated System",
-    longDesc: "A social platform designed to connect people with similar interests, featuring both web and mobile applications.",
+    longDesc: "Notification system (IOT, Web and Mobile App) for “Deaf Friend” working in a special coffee shop.",
     techStack: ["VueJs", "React Native - Expo", "FastApi", "PostgresQL", "Firebase", "RabbitMQ", "TailwindCSS", "HTML", "Figma",],
     role: "Frontend Developer and Mobile Developer",
     year: "2024",
@@ -201,7 +209,7 @@ export const PortfolioDetails = [
     id: "peri",
     title: "Peri Bugi",
     shortDesc: "Peri Bugi - Mobile App",
-    longDesc: "A mobile application for children's educational content and interactive learning activities.",
+    longDesc: "A multi-platform mobile app (Android & iOS) for tracking childrens toothbrushing, providing dental education, and knowledge quizzes for mothers",
     techStack: ["React Native - Expo", "Firebase", "NativeWind", "Figma", "PostgreSQL", "Figma", "FastAPI"],
     role: "Mobile Developer",
     year: "2024",
@@ -209,7 +217,7 @@ export const PortfolioDetails = [
   },
   {
     id: "tryout",
-    title: "Tryout Platform",
+    title: "Kampus ASN - Tryout Platform",
     shortDesc: "Tryout Web",
     longDesc: "An online examination and assessment platform for students preparing for various standardized tests.",
     techStack: ["Next.js", "FastAPI", "PostgreSQL", "TailwindCSS", "Figma", "RestAPI", "PostgreSQL"],
@@ -230,7 +238,7 @@ export const PortfolioDetails = [
   {
     id: "expense",
     title: "Expense Tracker",
-    shortDesc: "Expense Tracker Web (Golang) and Mobile (Swift UI)",
+    shortDesc: "Expense Tracker API (Golang) and Mobile (Swift UI)",
     longDesc: "A cross-platform expense tracking application built with Golang backend and native iOS frontend using SwiftUI.",
     techStack: ["Golang", "SwiftUI", "PostgreSQL", "Figma", "RestAPI"],
     role: "Full Stack Developer",
