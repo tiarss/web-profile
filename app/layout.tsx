@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   },
   authors: [{ name: 'Tiar Subrata' }],
   creator: 'Tiar Subrata',
+  verification: {
+    google: 'NmZ4UJj9KD1Jvo5IDstABytRkatLpVcqkVPUMu_zEKQ',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
