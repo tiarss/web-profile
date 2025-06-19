@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://tiarss.vercel.app/sitemap.xml
